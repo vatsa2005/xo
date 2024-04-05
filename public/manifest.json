@@ -1,0 +1,25 @@
+{
+  "short_name": "XO",
+  "name": "XO",
+  "icons": [
+    {
+      "src": "XO.png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "XO.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "XO.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#d9d9d9",
+  "background_color": "#ffffff"
+}

@@ -1,0 +1,270 @@
+.home {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.header__text {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 4vmin;
+}
+
+.header__text h1 {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    animation: appear-font 1.5s ease-in-out;
+    text-transform: uppercase;
+}
+
+.header__text__line {
+    background-color: #000000;
+    height: 0.6vmin;
+    width: 10%;
+    animation: appear-line 1s ease-in-out;
+}
+
+.body {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* height: 80vmin; Uncomment this whenever you're not using 100vh in the parent */
+}
+
+.home__body__names {
+    width: 100%;
+    height: 20%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.home__body__names__player_1, .home__body__names__player_2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home__body__names input {
+    width: 30%;
+    height: 10vmin;
+    text-align: center;
+    font-size: 4vmin;
+    text-transform: capitalize;
+    border: none;
+    border-radius: 2vmin;
+    background-color: #a6a6a6;
+    animation: appear-font 1s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.home__body__names h1 {
+    animation: appear-font 1s ease-in-out;
+}
+
+.home__body__names input::placeholder {
+    font-size: 4vmin;
+    text-align: center;
+}
+
+.home__body__names input:hover {
+    background-color: #d9d9d9;
+}
+
+.home__body__names input:focus {
+    outline: none;
+    border: none;
+}
+
+.home__body__content__playing {
+    height: 30%;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home__body__content__playing h2 {
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    text-transform: capitalize;
+}
+
+.home__body__content {
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.home__body__content__board {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 25%;
+    height: 70%;
+    animation: appear-font 1s;
+    /* height: 40vmin; */
+}
+
+.home__body__content__board__box {
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.home__body__content__board__box_1, .home__body__content__board__box_4, .home__body__content__board__box_7, .box1, .box4, .box7 {
+    border-right: 1px solid #000000;
+    border-bottom: 1.5px solid #000000;
+}
+.home__body__content__board__box_3, .home__body__content__board__box_6, .home__body__content__board__box_9, .box3, .box6, .box9 {
+    border-left: 1px solid #000000;
+    border-bottom: 1.5px solid #000000;
+}
+.home__body__content__board__box_2, .home__body__content__board__box_5, .home__body__content__board__box_8, .box2, .box5, .box8 {
+    border-right: 1px solid #000000;
+    border-left: 1px solid #000000;
+    border-bottom: 1.5px solid #000000;
+}
+.home__body__content__board__box_7, .home__body__content__board__box_8, .home__body__content__board__box_9, .box7, .box8, .box9 {
+    border-bottom: none;
+}
+
+.home__body__content__playing h2 {
+    animation: appear-font 1s ease-in-out;
+} 
+
+.home__body__content__board__box:hover {
+    background-color: #d9d9d9;
+    cursor: pointer;
+}
+
+
+
+.not_clicked p{
+    display: none;
+}
+
+.home__body__content__board__box_1_clicked p{
+    display: flex;
+}
+
+.home__body__content__board__box_2_clicked p{
+    display: flex;
+}
+
+.home__body__content__board__box_3_clicked p{
+    display: flex;
+}
+
+.home__body__content__board__box_4_clicked p{
+    display: flex;
+}
+
+.home__body__content__board__box_5_clicked p{
+    display: flex;
+}
+
+.home__body__content__board__box_6_clicked p{
+    display: flex;
+}
+
+.home__body__content__board__box_7_clicked p{
+    display: flex;
+}
+
+.home__body__content__board__box_8_clicked p{
+    display: flex;
+}
+
+.home__body__content__board__box_9_clicked p{
+    display: flex;
+}
+
+
+/* Keyframes */
+
+@keyframes appear-line {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 10%;
+    }
+}
+
+@keyframes appear-font {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/*Media Queries*/
+
+@media only screen and (max-width: 980px) {
+    /* .home__body__content__playing {
+        height: 40%;
+    } */
+
+    .home__body__content__board {
+        width: 30%;
+    }
+    
+}
+
+@media only screen and (max-width: 700px) {
+    .home__body__content__board {
+        width: 30%;
+    }
+    
+}
+
+/* @media only screen and (max-width: 600px) {
+    .home__body__names {
+        height: 30%;
+    }
+    .home__body__content {
+        height: 60%;
+    }
+} */
+
+@media only screen and (max-width: 600px) {
+    .home__body__content__board {
+        width: 40%;
+    }
+    
+}
+
+@media only screen and (max-width: 450px) {
+    .home__body__content__board {
+        width: 50%;
+    }
+    
+}
+
+

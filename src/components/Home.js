@@ -74,12 +74,12 @@ function Home() {
     useEffect(() => {
         function winner() {
 
-            function resetState() {
+            function resetState(timeout = 4000) {
                 setTimeout(() => {
                     setBoxState(() =>{
                         return {1: "", 2: "", 3: "", 4: "", 5: "", 6: "", 7: "", 8: "", 9: ""};
                     });
-                }, 4000)
+                }, timeout);
                 setPlayerFlag(() => {
                     return {player1: true, player2: false};
                 });
@@ -239,7 +239,7 @@ function Home() {
 
 
             } else if(totalClickedBoxes === 9) {
-                resetState();
+                resetState(2000);
                 setIsDraw(true);
                 setTimeout(() => {
                     setIsDraw(false);

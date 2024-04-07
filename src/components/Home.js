@@ -326,39 +326,39 @@ function Home() {
                         <h2>{(isDraw || isWin) ? (isDraw ? "Draw. Wait till the board Refreshes" : `The Winner is ${winner}`) : `Playing: ${playerFlag.player1 && player1 || playerFlag.player2 && player2}`}</h2>
                     </div>
                     <div className="home__body__content__board">
-                        <div id="1" className={`home__body__content__board__box_1 ${boxClickCls} home__body__content__board__box`} onClick={boxClick}>
+                        <div id="1" className={`home__body__content__board__box_1 ${boxClickCls} home__body__content__board__box`} onClick={!isWin ? boxClick : null}>
                             <p>{boxState[1]}</p>
                         </div>
 
-                        <div id="2" className={`home__body__content__board__box_2 ${boxClickCls} home__body__content__board__box`} onClick={boxClick}>
+                        <div id="2" className={`home__body__content__board__box_2 ${boxClickCls} home__body__content__board__box`} onClick={!isWin ? boxClick : null}>
                             <p>{boxState[2]}</p>
                         </div>
 
-                        <div id="3" className={`home__body__content__board__box_3 ${boxClickCls} home__body__content__board__box`} onClick={boxClick}>
+                        <div id="3" className={`home__body__content__board__box_3 ${boxClickCls} home__body__content__board__box`} onClick={!isWin ? boxClick : null}>
                             <p>{boxState[3]}</p>
                         </div>
 
-                        <div id="4" className={`home__body__content__board__box_4 ${boxClickCls} home__body__content__board__box`} onClick={boxClick}>
+                        <div id="4" className={`home__body__content__board__box_4 ${boxClickCls} home__body__content__board__box`} onClick={!isWin ? boxClick : null}>
                             <p>{boxState[4]}</p>
                         </div>
 
-                        <div id="5" className={`home__body__content__board__box_5 ${boxClickCls} home__body__content__board__box`} onClick={boxClick}>
+                        <div id="5" className={`home__body__content__board__box_5 ${boxClickCls} home__body__content__board__box`} onClick={!isWin ? boxClick : null}>
                             <p>{boxState[5]}</p>
                         </div>
 
-                        <div id="6" className={`home__body__content__board__box_6 ${boxClickCls} home__body__content__board__box`} onClick={boxClick}>
+                        <div id="6" className={`home__body__content__board__box_6 ${boxClickCls} home__body__content__board__box`} onClick={!isWin ? boxClick : null}>
                             <p>{boxState[6]}</p>
                         </div>
                         
-                        <div id="7" className={`home__body__content__board__box_7 ${boxClickCls} home__body__content__board__box`} onClick={boxClick}>
+                        <div id="7" className={`home__body__content__board__box_7 ${boxClickCls} home__body__content__board__box`} onClick={!isWin ? boxClick : null}>
                             <p>{boxState[7]}</p>
                         </div>
                         
-                        <div id="8" className={`home__body__content__board__box_8 ${boxClickCls} home__body__content__board__box`} onClick={boxClick}>
+                        <div id="8" className={`home__body__content__board__box_8 ${boxClickCls} home__body__content__board__box`} onClick={!isWin ? boxClick : null}>
                             <p>{boxState[8]}</p>
                         </div>
                         
-                        <div id="9" className={`home__body__content__board__box_9 ${boxClickCls} home__body__content__board__box`} onClick={boxClick}>
+                        <div id="9" className={`home__body__content__board__box_9 ${boxClickCls} home__body__content__board__box`} onClick={!isWin ? boxClick : null}>
                             <p>{boxState[9]}</p>
                         </div>
 

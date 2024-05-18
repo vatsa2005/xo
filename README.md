@@ -17,6 +17,10 @@ Node.js and npm (or yarn) are installed on your system.
 
 git clone https://github.com/vatsa2005/xo.git
 
+### Link to the project:
+
+https://xo-game-d49d8.web.app/
+
 ### Navigate to the project directory:
 
 cd two-player-xo-game

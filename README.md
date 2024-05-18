@@ -11,7 +11,7 @@ This is a two-player Tic-Tac-Toe game built with React.
 
 ### Prerequisites:
 
-Node.js and npm (or yarn) installed on your system.
+Node.js and npm (or yarn) are installed on your system.
 
 ### Clone this repository:
 
@@ -40,6 +40,21 @@ This will start the development server and open the game in your web browser at 
 - Core functionalities include:
 - A playable Tic-Tac-Toe board.
 - The ability to change player names before starting the game.
+
+
+### v2.0 (Login Functionality, Menu Bar, and Blitz Mode)
+#### Login Functionality
+- Login system implemented using Firebase.
+
+#### Menu Bar
+- A full-screen menu bar has been implemented.
+
+#### Blitz Mode
+- Now players can access a new mode called blitz.
+- Each player has 5 seconds.
+- Be careful not to let the timer tick down to zero, or you'll lose!
+
+
 
 ## Contributing
 

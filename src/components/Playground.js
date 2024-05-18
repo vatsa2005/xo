@@ -1,10 +1,11 @@
-import React, { useState, useEffect} from "react";
+import React from "react";
+import { useState, useEffect} from "react";
 import useWindowSize from '@reactutils/use-windows-size';
 import "../styles/home.css";
 import Confetti from 'react-confetti';
-import Header from "./Header";
+import "../styles/home.css";
 
-function Home() {
+function Playground() {
 
     const { width, height } = useWindowSize();
     const[boxClickCls, setBoxClickCls] = useState("not_clicked");
@@ -257,7 +258,7 @@ function Home() {
         
     }, [boxState]);
 
-    
+
 
 
     function boxClick(e) {
@@ -303,74 +304,67 @@ function Home() {
         }
     }
 
-    
+
 
     return(
-        <div className="home">
-            {isWin && <Confetti width={width} height={height}/>}
-            <div className="header">
-                <Header title = "XO"/>
-            </div>
             <div className="body">
-                <div className="home__body__names">
-                    <div className="home__body__names__player_1">
-                        <input type="text" placeholder="Player 1" id="p1" onChange={names} value={player1}/>
-                        <h1>:X</h1>
+                {isWin && <Confetti width={width} height={height}/>}
+                    <div className="home__body__names">
+                        <div className="home__body__names__player_1">
+                            <input type="text" placeholder="Player 1" id="p1" onChange={names} value={player1}/>
+                            <h1>:X</h1>
+                        </div>
+                        <div className="home__body__names__player_2">
+                            <input type="text" placeholder="Player 2" id="p2" onChange={names} value={player2}/>
+                            <h1>:O</h1> 
+                        </div>
                     </div>
-                    <div className="home__body__names__player_2">
-                        <input type="text" placeholder="Player 2" id="p2" onChange={names} value={player2}/>
-                        <h1>:O</h1> 
-                    </div>
-                </div>
-                <div className="home__body__content">
-                    <div className="home__body__content__playing">
-                        <h2>{(isDraw || isWin) ? (isDraw ? "Draw. Wait till the board Refreshes" : `The Winner is ${winner}`) : `Playing: ${playerFlag.player1 && player1 || playerFlag.player2 && player2}`}</h2>
-                    </div>
-                    <div className="home__body__content__board">
-                        <div id="1" className={`home__body__content__board__box_1 ${boxClickCls} home__body__content__board__box`} onClick={!isWin ? boxClick : null}>
-                            <p>{boxState[1]}</p>
+                    <div className="home__body__content">
+                        <div className="home__body__content__playing">
+                            <h2>{(isDraw || isWin) ? (isDraw ? "Draw. Wait till the board Refreshes" : `The Winner is ${winner}`) : `Playing: ${playerFlag.player1 && player1 || playerFlag.player2 && player2}`}</h2>
                         </div>
+                        <div className="home__body__content__board">
+                            <div id="1" className={`home__body__content__board__box_1 ${boxClickCls} home__body__content__board__box`} onClick={!isWin ? boxClick : null}>
+                                <p>{boxState[1]}</p>
+                            </div>
 
-                        <div id="2" className={`home__body__content__board__box_2 ${boxClickCls} home__body__content__board__box`} onClick={!isWin ? boxClick : null}>
-                            <p>{boxState[2]}</p>
-                        </div>
+                            <div id="2" className={`home__body__content__board__box_2 ${boxClickCls} home__body__content__board__box`} onClick={!isWin ? boxClick : null}>
+                                <p>{boxState[2]}</p>
+                            </div>
 
-                        <div id="3" className={`home__body__content__board__box_3 ${boxClickCls} home__body__content__board__box`} onClick={!isWin ? boxClick : null}>
-                            <p>{boxState[3]}</p>
-                        </div>
+                            <div id="3" className={`home__body__content__board__box_3 ${boxClickCls} home__body__content__board__box`} onClick={!isWin ? boxClick : null}>
+                                <p>{boxState[3]}</p>
+                            </div>
 
-                        <div id="4" className={`home__body__content__board__box_4 ${boxClickCls} home__body__content__board__box`} onClick={!isWin ? boxClick : null}>
-                            <p>{boxState[4]}</p>
-                        </div>
+                            <div id="4" className={`home__body__content__board__box_4 ${boxClickCls} home__body__content__board__box`} onClick={!isWin ? boxClick : null}>
+                                <p>{boxState[4]}</p>
+                            </div>
 
-                        <div id="5" className={`home__body__content__board__box_5 ${boxClickCls} home__body__content__board__box`} onClick={!isWin ? boxClick : null}>
-                            <p>{boxState[5]}</p>
-                        </div>
+                            <div id="5" className={`home__body__content__board__box_5 ${boxClickCls} home__body__content__board__box`} onClick={!isWin ? boxClick : null}>
+                                <p>{boxState[5]}</p>
+                            </div>
 
-                        <div id="6" className={`home__body__content__board__box_6 ${boxClickCls} home__body__content__board__box`} onClick={!isWin ? boxClick : null}>
-                            <p>{boxState[6]}</p>
-                        </div>
+                            <div id="6" className={`home__body__content__board__box_6 ${boxClickCls} home__body__content__board__box`} onClick={!isWin ? boxClick : null}>
+                                <p>{boxState[6]}</p>
+                            </div>
                         
-                        <div id="7" className={`home__body__content__board__box_7 ${boxClickCls} home__body__content__board__box`} onClick={!isWin ? boxClick : null}>
-                            <p>{boxState[7]}</p>
-                        </div>
+                            <div id="7" className={`home__body__content__board__box_7 ${boxClickCls} home__body__content__board__box`} onClick={!isWin ? boxClick : null}>
+                                <p>{boxState[7]}</p>
+                            </div>
                         
-                        <div id="8" className={`home__body__content__board__box_8 ${boxClickCls} home__body__content__board__box`} onClick={!isWin ? boxClick : null}>
-                            <p>{boxState[8]}</p>
-                        </div>
+                            <div id="8" className={`home__body__content__board__box_8 ${boxClickCls} home__body__content__board__box`} onClick={!isWin ? boxClick : null}>
+                                <p>{boxState[8]}</p>
+                            </div>
                         
-                        <div id="9" className={`home__body__content__board__box_9 ${boxClickCls} home__body__content__board__box`} onClick={!isWin ? boxClick : null}>
-                            <p>{boxState[9]}</p>
-                        </div>
+                            <div id="9" className={`home__body__content__board__box_9 ${boxClickCls} home__body__content__board__box`} onClick={!isWin ? boxClick : null}>
+                                <p>{boxState[9]}</p>
+                            </div>
 
+                        </div>
                     </div>
-                </div>
             </div>
-        </div>
-
     );
 }
 
-export default Home;
-
+export default Playground;
 

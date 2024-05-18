@@ -3,13 +3,15 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .header {
     height: 20%;
-    width: 100%;
+    width: 90%;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     text-align: center;
 }
@@ -22,6 +24,26 @@
     flex-direction: column;
     text-align: center;
     font-size: 4vmin;
+}
+
+.header__account_logo, .header__menu_bar {
+    animation: appear-font 1s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__account_logo .MuiAvatar-root {
+    height: 8vmin;
+    width: 8vmin;
+}
+
+.header__menu_bar .MuiSvgIcon-root {
+    font-size: 8vmin;
+}
+
+.header__account_logo :hover {
+    cursor: pointer;
 }
 
 .header__text h1 {

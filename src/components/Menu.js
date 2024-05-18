@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import "../styles/menu.css";
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
-import AssistantIcon from '@mui/icons-material/Assistant';
 import TimerIcon from '@mui/icons-material/Timer';
 import HomeIcon from '@mui/icons-material/Home';
 import { Link } from 'react-router-dom';
